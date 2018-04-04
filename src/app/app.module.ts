@@ -28,7 +28,7 @@ const ROUTES = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, {useHash: true}) // Add routes to the app
+    RouterModule.forRoot(ROUTES) // Add routes to the app
   ],
   providers: [],
   bootstrap: [AppComponent]
