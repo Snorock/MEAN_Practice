@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // private instance veriables
+
+  // public properties
   title = 'app';
+
+  //constructor
 }

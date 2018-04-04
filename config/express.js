@@ -22,6 +22,7 @@ mongoDB.once('open', () => {
 });
 
 
+
 let index = require('../app/routes/index'); // define the main route
 let games = require('../app/routes/games');
 
@@ -30,6 +31,12 @@ let app = express();
 // view engine setup
 app.set('views', path.join(__dirname, '../app/views'));
 app.set('view engine', 'ejs'); // view engine type
+
+//==========================================================================================
+// Catch all other routes and return the index file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
